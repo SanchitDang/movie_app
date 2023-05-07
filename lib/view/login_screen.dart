@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_app/utils/routes/route_names.dart';
+import 'package:movie_app/utils/utils.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -20,7 +21,12 @@ class _LoginScreenState extends State<LoginScreen> {
         children: [
           Center(
             child:
-            ElevatedButton(onPressed: () => Navigator.pushNamed(context, RouteNames.home), child: Text("3233rr234dgfsgsdg"),
+            ElevatedButton(onPressed: () {
+              //Navigator.pushNamed(context, RouteNames.home);
+              Utils.createToastLong("Toast");
+              Utils.createFlushBar(context, "message");
+              Utils.createSnackBar(context, "message");
+            }, child: Text("3233rr234dgfsgsdg"),
 
             ),
           )
