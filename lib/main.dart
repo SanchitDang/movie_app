@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/utils/routes/routes.dart';
+import 'package:movie_app/utils/routes/route_names.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-     // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: RouteNames.login,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
