@@ -151,7 +151,7 @@ class _SignUpViewState extends State<SignUpView> {
                 ),
                 const SizedBox(width: 6),
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, RouteNames.login),
+                  onTap: () => Navigator.pushReplacementNamed(context, RouteNames.login),
                   child: const Text("Login In",
                     style: TextStyle(
                         color: MyColors.appThemeColor,

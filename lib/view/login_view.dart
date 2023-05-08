@@ -109,7 +109,6 @@ class _LoginViewState extends State<LoginView> {
 
                     authViewModelProvider.loginApi(context, data);
 
-
                   }
 
             }),
@@ -123,7 +122,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
                 const SizedBox(width: 6),
                 GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, RouteNames.signup),
+                  onTap: () => Navigator.pushReplacementNamed(context, RouteNames.signup),
                   child: const Text("Register Now",
                     style: TextStyle(
                         color: MyColors.appThemeColor,
