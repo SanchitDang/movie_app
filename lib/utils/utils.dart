@@ -3,14 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:another_flushbar/flushbar_route.dart';
 
+import '../res/colors.dart';
+
 class Utils {
+
+  static changeFocus(BuildContext context, FocusNode current, FocusNode next){
+    current.unfocus();
+    FocusScope.of(context).requestFocus(next);
+  }
 
   static createToastShort(String message){
     Fluttertoast.showToast(
       msg: message,
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
-      backgroundColor: Colors.teal,
+      backgroundColor: MyColors.appThemeColor,
       textColor: Colors.white,
     );
   }
@@ -20,7 +27,7 @@ class Utils {
       msg: message,
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.BOTTOM,
-      backgroundColor: Colors.teal,
+      backgroundColor: MyColors.appThemeColor,
       textColor: Colors.white,
     );
   }
@@ -50,10 +57,9 @@ class Utils {
       SnackBar(
         content: Text(message),
         duration: const Duration(seconds: 3),
-        backgroundColor: Colors.teal,
+        backgroundColor: MyColors.appThemeColor,
       ),
     );
-
   }
 
 }
