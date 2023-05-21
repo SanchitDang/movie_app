@@ -32,7 +32,18 @@ class _HomeViewState extends State<HomeView> {
       ),
       body: Column(
         children: [
-
+           ListTile(
+             onTap: () => Navigator.pushNamed(context, RouteNames.favouritePicker),
+             title: const Text('Favourites'),
+           ),
+          ListTile(
+            onTap: () => Navigator.pushNamed(context, RouteNames.colorChanger),
+            title: const Text('Color Slider'),
+          ),
+          ListTile(
+            onTap: () => Navigator.pushNamed(context, RouteNames.themeChanger),
+            title: const Text('Change Theme'),
+          )
         ],
       ),
     );

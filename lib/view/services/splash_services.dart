@@ -13,7 +13,7 @@ class SplashServices {
 
     getUserData().then((value) => {
 
-      if (value.token != null) {
+      if (value.token != null && value.token != '') {
           Timer(const Duration(seconds: 3),
       () => Navigator.pushReplacementNamed(context, RouteNames.home))
       } else {
